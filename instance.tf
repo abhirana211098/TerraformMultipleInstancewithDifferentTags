@@ -15,7 +15,7 @@ resource "aws_instance" "my-machine" {
 
   tags = {
     Name = "my-machine-${count.index}"
-    Environment = "Spluk-${count.index}"
+    Environment = "Splunk-${count.index}"
     OS = "Linux"
   }
 
