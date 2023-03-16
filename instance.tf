@@ -10,7 +10,7 @@ resource "aws_instance" "my-machine" {
   instance_type = "t2.micro"
   security_groups=["launch-wizard-2"]
   associate_public_ip_address = true
-  key_name = "secondawsfile"
+  key_name = "searchheadkey"
   count = 6
 
   tags = {
