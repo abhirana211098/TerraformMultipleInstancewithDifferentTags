@@ -11,7 +11,7 @@ resource "aws_instance" "my-machine" {
   security_groups=["launch-wizard-2"]
   associate_public_ip_address = true
   key_name = "searchheadkey"
-  count = 4
+  count = 6
 
   tags = {
     Name = "my-machine-${count.index}"
