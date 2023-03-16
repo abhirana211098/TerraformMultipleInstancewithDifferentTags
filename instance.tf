@@ -5,7 +5,7 @@ provider "aws" {
   
 }
 
-resource "aws_instance" "terraform_EC2" {
+resource "aws_instance" "my-machine" {
   ami           = "ami-0d81306eddc614a45"
   instance_type = "t2.micro"
   security_groups=["launch-wizard-3"]
@@ -14,8 +14,8 @@ resource "aws_instance" "terraform_EC2" {
   count = 6
 
   tags = {
-    Name ="Cluster"
-    Environment = "DEV"
+    Name = "my-machine-${count.index}"
+    Environment = "Spluk-${count.index}"
     OS = "Linux"
   }
 
